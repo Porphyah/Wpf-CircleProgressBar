@@ -18,31 +18,31 @@
                             <Path.Data>
                                 <GeometryGroup>
                                     <EllipseGeometry 
-                                        RadiusX="{Binding Width, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource CircleProgressRadiusConverter}}" 
-                                        RadiusY="{Binding Height, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource CircleProgressRadiusConverter}}">
+                                        RadiusX="{Binding ActualWidth, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource CircleProgressRadiusConverter}}" 
+                                        RadiusY="{Binding ActualHeight, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource CircleProgressRadiusConverter}}">
                                         <EllipseGeometry.Center>
                                             <MultiBinding Converter="{StaticResource CircleProgressCenterConverter}">
-                                                <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="Height"/>
-                                                <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="Width"/>
+                                                <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="ActualHeight"/>
+                                                <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="ActualWidth"/>
                                             </MultiBinding>
                                         </EllipseGeometry.Center>
                                     </EllipseGeometry>
                                     <EllipseGeometry>
                                         <EllipseGeometry.Center>
                                             <MultiBinding Converter="{StaticResource CircleProgressCenterConverter}">
-                                                <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="Height"/>
-                                                <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="Width"/>
+                                                <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="ActualHeight"/>
+                                                <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="ActualWidth"/>
                                             </MultiBinding>
                                         </EllipseGeometry.Center>
                                         <EllipseGeometry.RadiusX>
                                             <MultiBinding Converter="{StaticResource CircleProgressRadiusConverter}">
-                                                <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="Width"/>
+                                                <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="ActualWidth"/>
                                                 <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="Tag"/>
                                             </MultiBinding>
                                         </EllipseGeometry.RadiusX>
                                         <EllipseGeometry.RadiusY>
                                             <MultiBinding Converter="{StaticResource CircleProgressRadiusConverter}">
-                                                <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="Height"/>
+                                                <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="ActualHeight"/>
                                                 <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="Tag"/>
                                             </MultiBinding>
                                         </EllipseGeometry.RadiusY>
@@ -56,8 +56,8 @@
                                     <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="Value"/>
                                     <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="Minimum"/>
                                     <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="Maximum"/>
-                                    <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="Height"/>
-                                    <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="Width"/>
+                                    <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="ActualHeight"/>
+                                    <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="ActualWidth"/>
                                     <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="Tag"/>
                                 </MultiBinding>
                             </Path.Data>
